@@ -10,7 +10,7 @@ class ModuleException(Exception):
 
 class BaseModule:
 
-	def __init__(self, base_url: str, module_path: str, sdk: SDK.SDK):
+	def __init__(self, base_url: str, module_path: str, sdk: any):
 		self.path = base_url + module_path
 		self.sdk = sdk
 
