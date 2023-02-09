@@ -5,11 +5,12 @@ from pydantic import BaseModel
 
 
 class TransactionCreateInResponse(BaseModel):
-	description: str
-	dest_tag: str
-	refer: str
-	status: str
-	token_name: str
+	description: str = None
+	dest_tag: str = None
+	address: str
+	alter_refer: str = None
+	status: str = None
+	currency_name: str
 	external_id: str
 
 

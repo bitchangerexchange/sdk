@@ -28,6 +28,8 @@ class BaseSDK:
 			hashlib.sha512,
 		).hexdigest()
 
+		print(signature)
+
 		return {
 			"Content-Type": "application/json",
 			"ApiPublic": self.__public_key,

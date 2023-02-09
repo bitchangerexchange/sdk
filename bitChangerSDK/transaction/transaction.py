@@ -4,7 +4,7 @@ from bitChangerSDK.baseModule import BaseModule
 
 class Transaction(BaseModule):
 
-	def transaction_create_in(self, token: str, callback_url: str, card_number: str, amount: float, email: str) -> TransactionCreateInResponse:
+	def transaction_create_in(self, token: str, callback_url: str, card_number: str = None, amount: float = None, email: str = None) -> TransactionCreateInResponse:
 		payload = {
 			"token": token,
 			"callback_url": callback_url,

@@ -4,9 +4,10 @@ from bitChangerSDK.baseModule import BaseModule
 
 class Swap(BaseModule):
 
-	def swap_create(self, token_from: str, amount: float, callback_url: str) -> SwapCreateResponse:
+	def swap_create(self, token_from: str, amount: float, token_to: str, callback_url: str) -> SwapCreateResponse:
 		payload = {
 			"token_from": token_from,
+			"token_to": token_to,
 			"amount": amount,
 			"callback_url": callback_url,
 		}
